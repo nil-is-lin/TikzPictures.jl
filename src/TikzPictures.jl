@@ -191,7 +191,8 @@ function save(f::Union{TEX,TIKZ}, tp::TikzPicture)
                 println(tex, "\\usepackage{tikz}")
                 println(tex, "\\usepackage{adjustbox}")
             else
-                println(tex, "\\documentclass[tikz]{standalone}")
+                println(tex, "\\documentclass[UTF8]{standalone}")
+                println(tex, "\\usepackage{tikz}")
             end
             println(tex, tp.preamble)
             println(tex, "\\begin{document}")
